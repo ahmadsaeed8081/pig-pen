@@ -1,0 +1,103 @@
+// Header
+.header-camp {
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  min-height: 90px;
+  padding: 12px 0px;
+  // position: sticky;
+  background: transparent;
+  margin-bottom: 60px;
+  .wrap {
+    .left {
+      flex: 0.3;
+      @include media("<=tablet") {
+        flex: 0.5;
+      }
+      .logo-img {
+        .logo {
+          height: 86px;
+          transition: transform 0.3s;
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+    .right {
+      flex: 1;
+      .menu {
+        gap: 20px;
+        @include media("<=tablet") {
+          display: none;
+        }
+        .mint {
+          font-size: 32px;
+          font-weight: 700;
+          @include anim;
+          &:hover {
+            color: $themeColor;
+          }
+        }
+        .icon {
+          cursor: pointer;
+          background-color: #000000;
+          border-radius: 100%;
+          padding: 6px;
+
+          @include anim;
+          cursor: pointer;
+          svg {
+            text-align: center;
+            justify-items: center;
+            height: 30px;
+            width: 30px;
+            @include anim;
+            path {
+              fill: $themeColor;
+            }
+          }
+          &:hover {
+            background: transparent;
+          }
+        }
+        .btn {
+          background-color: $themeColor;
+          border: 1px solid $themeColor;
+          font-size: 16px;
+          font-weight: bold;
+          padding: 9px 16px;
+          border-radius: 20px;
+          @include anim;
+          &:hover {
+            background: transparent;
+            border: 1px solid $themeColor;
+          }
+        }
+      }
+    }
+    .menu-icon {
+      display: none;
+      cursor: pointer;
+      @include anim;
+      @include media("<=tablet") {
+        display: flex;
+      }
+      svg {
+        path {
+          stroke: #fff;
+        }
+      }
+
+      &:hover {
+        svg {
+          path {
+            stroke: $themeColor;
+          }
+        }
+      }
+    }
+  }
+}

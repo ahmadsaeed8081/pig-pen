@@ -197,7 +197,7 @@ function find_totalAmount(){
     <div className="lading-page flex flex-col">
       <div className="hero wrapWidth flex max-md:flex-col">
         <div className="flex-1 wrap">
-          <h1 className="main-heading">TIME TO GET DIRTY!</h1>
+          <h1 className="main-heading" style={{ color:"black" }}>TIME TO GET DIRTY!</h1>
           <div className="paragraph gap-12">
             <p className="pg-1">
               Each one of our cute, cuddly, and ultra clean MAGA Frens are

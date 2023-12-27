@@ -20,9 +20,9 @@ const Header = () => {
             {/* <a href="/" className="mint">
               mint
             </a> */}
-            <a href="#" className="icon">
+            {/* <a href="#" className="icon">
               <DiscordIcon />
-            </a>
+            </a> */}
             <a href="https://twitter.com/SnappySqueals" className="icon">
               <TwitterIcon />
             </a>

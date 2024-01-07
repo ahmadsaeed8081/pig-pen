@@ -9,7 +9,7 @@ import Home from "./Pages/Home";
 import { EthereumClient, w3mConnectors, w3mProvider } from '@web3modal/ethereum'
 import { Web3Modal } from '@web3modal/react'
 import { configureChains, createConfig, WagmiConfig } from 'wagmi'
-import { polygonMumbai} from 'wagmi/chains'
+import { mainnet } from 'wagmi/chains'
 import { infuraProvider } from 'wagmi/providers/infura'
 import { alchemyProvider } from 'wagmi/providers/alchemy'
 import Web3 from "web3";
@@ -17,7 +17,7 @@ import Web3 from "web3";
 function App() {
 
 
-  const chains = [polygonMumbai]
+  const chains = [mainnet]
   const projectId = 'f385bf4e147a499aee6b6c2f17ded944'
   
   const { publicClient } = configureChains(chains, [w3mProvider({ projectId })])

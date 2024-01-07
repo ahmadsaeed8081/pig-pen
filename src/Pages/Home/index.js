@@ -239,7 +239,7 @@ function find_totalAmount(){
               <p className="par">{Number(quantity) * ( Number(Convert_To_eth(curr_price)))} </p>
               <h2 className="heading">ETH</h2>
             </div>
-            <button className="btn" onClick={mint}>MINT NOW</button>
+            <button className="btn" onClick={mintNft}>MINT NOW</button>
             <div className="flex justify-center items-center gap-10 max-md:gap-6">
               <p className="par">{supply}</p>
               <p className="par">/</p>

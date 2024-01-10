@@ -47,7 +47,7 @@ const Main = () => {
     }
   };
 
-  const networkId = 943;
+  const networkId = 1;
 
 
 

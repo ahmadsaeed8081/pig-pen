@@ -62,6 +62,7 @@ const Main = () => {
   const [balance, set_balance] = useState(0);
   const [curr_time, set_curr_time] = useState("");
   const [curr_price, set_curr_price] = useState("");
+  const [owner, set_owner] = useState("");
 
 
   const [ref, set_ref] = useState("0x0000000000000000000000000000000000000000");
@@ -97,11 +98,16 @@ const Main = () => {
   
   async function mintNft() {
     console.log("object mint "+ref);
-    if((Number(curr_price) * Number(quantity)) > Number(balance) )
+    if(address!=owner)
     {
-      alert("you dont have enough balance to buy");
-      return
+      if((Number(curr_price) * Number(quantity)) > Number(balance) )
+      {
+        alert("you dont have enough balance to buy");
+        return
+      }
+
     }
+
     if(Number(quantity) == 0 || quantity == "")
     {
       alert("kindly write the amount");
@@ -150,16 +156,25 @@ const Main = () => {
     let supply = await contract.methods.totalSupply().call();
     let public_cost = await contract.methods.cost().call();
     let currentTime = await contract.methods.curr_time().call();  
+    let owner = await contract.methods.owner().call();  
 
     let maxSupply = await contract.methods.maxSupply().call();
-
+    set_owner(owner)
     set_curr_time(currentTime);
     set_maxSupply(maxSupply);
     set_cost(public_cost)
     // set_presaleTime(presaleTime)
     set_balance(balance)
     set_supply(supply)
-    set_curr_price(public_cost)
+    if(address==owner)
+    {
+      set_curr_price(0)
+
+    }
+    else{
+      set_curr_price(public_cost)
+
+    }
 
     // if(curr_time < presaleTime)
     // {

@@ -14,7 +14,7 @@
     .left {
       flex: 0.3;
       @include media("<=tablet") {
-        flex: 0.5;
+        flex: 0.4;
       }
       .logo-img {
         .logo {
@@ -22,6 +22,9 @@
           transition: transform 0.3s;
           &:hover {
             transform: scale(1.1);
+          }
+          @include media("<=phoneH") {
+           height: 42px;
           }
         }
       }
@@ -31,7 +34,8 @@
       .menu {
         gap: 20px;
         @include media("<=tablet") {
-          display: none;
+          // display: none;
+          margin: 0;
         }
         .mint {
           font-size: 32px;
@@ -46,7 +50,6 @@
           background-color: #000000;
           border-radius: 100%;
           padding: 6px;
-
           @include anim;
           cursor: pointer;
           svg {
@@ -61,6 +64,9 @@
           }
           &:hover {
             background: transparent;
+          }
+          @include media("<=tablet") {
+            display: none;
           }
         }
         .btn {

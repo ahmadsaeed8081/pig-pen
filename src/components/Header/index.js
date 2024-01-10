@@ -5,7 +5,7 @@ import { useWeb3Modal } from '@web3modal/react'
 const Header = () => {
 
   const { open, close } = useWeb3Modal()
-  const { address, isConnected,isDisconnected } = useAccount()
+  const { address, isConnected, isDisconnected } = useAccount()
 
   return (
     <div className="header-camp flex">
@@ -26,18 +26,18 @@ const Header = () => {
             <a href="https://twitter.com/SnappySqueals" className="icon">
               <TwitterIcon />
             </a>
-            <button className="btn"onClick={open} >{isConnected?address.slice(0,5)+"..."+address.slice(38,42): 'Connect Wallet' }</button>
+            <button className="btn" onClick={open} >{isConnected ? address.slice(0, 5) + "..." + address.slice(38, 42) : 'Connect Wallet'}</button>
           </div>
         </div>
-        <div
+        {/* <div
           className="menu-icon flex items-center justify-center"
-          // onClick={(e) => {
-          //   e.stopPropagation();
-          //   setOpenSidebar(!openSidebar);
-          // }}
+          onClick={(e) => {
+            e.stopPropagation();
+            setOpenSidebar(!openSidebar);
+          }}
         >
           <MenuIcon />
-        </div>
+        </div> */}
       </div>
     </div>
   );

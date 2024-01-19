@@ -212,22 +212,23 @@ function find_totalAmount(){
     <div className="lading-page flex flex-col">
       <div className="hero wrapWidth flex max-md:flex-col">
         <div className="flex-1 wrap">
-          <h1 className="main-heading" style={{ color:"black" }}>TIME TO GET DIRTY!</h1>
+          <h1 className="main-heading" style={{ color:"black" }}>DO YOU EVEN OINK???</h1>
           <div className="paragraph gap-12">
+            {/* <p className="pg-1">
+            DO YOU EVEN OINK???            </p> */}
             <p className="pg-1">
-              Each one of our cute, cuddly, and ultra clean MAGA Frens are
-              generated from over 150 adorable traits!
+            420 Pigs here to disrupt the blockchain
+            More than a derivative, this is a movement
             </p>
             <p className="pg-1">
-              The complexity of this bad-assery, should future proof your
-              journey in the mass array of Metaverses for years to come!
+            Will you join the PigPen?
             </p>
-            <p className="pg-1">
+            {/* <p className="pg-1">
               We shall raid the Zuckerverse together in MAGA Fren style!!
             </p>
             <p className="pg-1">
               Just wait for the IN-BREEDING and BLM-BUDDIES...
-            </p>
+            </p> */}
           </div>
         </div>
 
